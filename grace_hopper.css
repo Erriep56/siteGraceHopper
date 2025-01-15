@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "Bidenatrial";
+    src:
+      url("fonts/Bidenatrial.ttf") format("truetype");
+  }
+
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* En-tête */
+
+header {
+    padding: 50px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Bidenatrial', serif;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+nav {
+    margin: 10px auto;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espace entre les éléments */
+    width: auto; /* Adapte automatiquement à la taille du contenu */
+}
+
+nav div {
+    padding: 5px 10px; /* Ajoute du remplissage autour des liens */
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease; /* changement de couleur */
+}
+
+a:hover {
+    color: #ffc107; /* Change la couleur au survol */
+}
+
+nav div a {
+    font-size: 30px; /* grande taille dans l'en-tête */
+}
+
+aside {
+    display: flex;
+}
+
+ul li {
+    padding: 5px 10px; /* ajoute de l'espace dans la liste à la fin */
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 20px;
+}
+
+.content {
+    background-color: #3e3e3e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.content h2 {
+    color: #ffc107;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #3e3e3e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+}
+
+aside figure {
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    max-width: 75%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sidebar-image {
+    max-width: 100%; /* Limite la largeur de l'image à 100% de son conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+    display: block; /* Assure que l'image est un élément de bloc */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    border-radius: 5%; /* arrondit les coins */
+}
+
+
+aside table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+aside th, .sidebar td {
+    text-align: left;
+    padding: 15px;
+}
+
+aside th {
+    color: #ffc107;
+}
+
+.flag {
+    width: 16px; 
+    height: 16px; 
+    vertical-align: middle;
+    margin: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        order: -1;
+      }
+}
