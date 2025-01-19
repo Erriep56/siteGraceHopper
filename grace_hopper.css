@@ -9,8 +9,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #333333; /*couleur du fonds */
+    color: #ffffff; /*couleur du texte */
 }
 
 /* En-tête */
@@ -29,17 +29,13 @@ header h1 {
 
 nav {
     margin: 10px auto;
-    padding: 5px;
+    padding: 10px 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espace entre les éléments */
-    width: auto; /* Adapte automatiquement à la taille du contenu */
-}
-
-nav div {
-    padding: 5px 10px; /* Ajoute du remplissage autour des liens */
+    gap: 50px; /* espace entre les titres */
+    width: auto; /* adapte la largeur du contenu */
 }
 
 a {
@@ -49,16 +45,18 @@ a {
 }
 
 a:hover {
-    color: #ffc107; /* Change la couleur au survol */
+    color: #ffc107; /* change la couleur quand on survole avec la souris */
 }
 
 nav div a {
-    font-size: 30px; /* grande taille dans l'en-tête */
+    font-size: 30px; /* grande taille des caractères dans l'en-tête */
 }
 
+/*aside correspond au bloc de droite*/
 aside {
     display: flex;
-}
+    height :min-content; /* permet que le bloc ne descende pas jusqu'en bas*/
+} 
 
 ul li {
     padding: 5px 10px; /* ajoute de l'espace dans la liste à la fin */
@@ -73,74 +71,89 @@ ul li {
 }
 
 .content {
-    background-color: #3e3e3e;
+    background-color: #3b3b3b;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* coins arrondis */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); /* ombre derrière le bloc */
 }
 
 .content h2 {
     color: #ffc107;
+    margin-top: 40px;
+    font-size: x-large ;
+}
+
+.content h3 {
+    color: #bebebe;
+    margin-top: 25px;
+    font-size: large;
+}
+
+.content a {
+    text-decoration: none;
+    color: #ffc107;
+    transition: color 0.3s ease; /* changement de couleur */
+}
+
+.content a:hover {
+    color: #666666; /* change la couleur quand on survole avec la souris */
 }
 
 aside {
     display: flex;
     flex-direction: column;
-    background-color: #3e3e3e;
+    background-color: #3b3b3b;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* coins arrondis */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); /* ombre derrière le bloc */
     text-align: center;
 
 }
 
-aside figure {
+aside figure { /* l'image est dans un conteneur */
     justify-content: center;
     align-items: center;
     object-fit: cover;
-    max-width: 75%;
+    max-width: 65%;
     height: auto;
     margin: 0 auto;
     text-align: center;
 }
 
-.sidebar-image {
-    max-width: 100%; /* Limite la largeur de l'image à 100% de son conteneur */
-    height: auto; /* Conserve les proportions de l'image */
-    display: block; /* Assure que l'image est un élément de bloc */
-    margin: 0 auto; /* Centre l'image horizontalement */
+.sidebar-image {/* limite la largeur de l'image à son conteneur */
+    max-width: 100%; 
+    height: auto; /* conserve les proportions */
+    display: block; /* l'image est un élément block */
+    margin: 0 auto; /* centre l'image horizontalement */
     border-radius: 5%; /* arrondit les coins */
 }
 
 
 aside table {
     width: 100%;
-    border-collapse: collapse;
 }
 
 aside th, .sidebar td {
     text-align: left;
     padding: 15px;
+    color: #ffc107
 }
 
-aside th {
-    color: #ffc107;
-}
-
-.flag {
+/* propriété pour le petit drapeau*/
+.flag { 
     width: 16px; 
     height: 16px; 
     vertical-align: middle;
     margin: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* pour que le site soit adapté aux téléphones */
+@media (max-width: 750px) {
     .container {
         flex-direction: column;
     }
 
     aside {
         order: -1;
-      }
+      } /* inverse la colonne aside avec celle de content quand le navigateur est petit */
 }
